@@ -32,11 +32,11 @@ https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrat
 
 ## Implementation
 
-### Arhcitecture
+### Architecture
 
 ![solution_architecture](docs/asset/solution_architecture.png)
 
-### CDK Application
+### IaC - CDK Project
 
 All the resources described above are implemented and provided through AWS CDK ver2. Because this CDK project is built on top of [AWS CDK Project Template for DevOps
 ](https://github.com/aws-samples/aws-cdk-project-template-for-devops), please refer to that repository for details.
@@ -62,7 +62,7 @@ sh script/setup_initial.sh config/app-config-demo.json
 sh script/destroy_stacks.sh config/app-config-demo.json
 ```
 
-## Output
+## Key Deployment Results
 
 ### App client settings in Amazon Cognito User pool
 
@@ -153,7 +153,7 @@ curl -X POST "${API_ENDPOINT}user" -H "Authorization:${ACCESS_TOKEN}"
 
 ```bash
 sh script/setup_initial.sh config/app-config-demo.json
-``
+```
 
 Caution: You must ```delete``` Amazon Cognito User Pools manually because of removal policy.
 
