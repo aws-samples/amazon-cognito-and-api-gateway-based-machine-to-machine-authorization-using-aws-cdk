@@ -1,0 +1,45 @@
+{
+    "Project": {
+        "Name": "OAuthClient",
+        "Stage": "Demo",
+        "Account": "75157*******",
+        "Region": "eu-central-1",
+        "Profile": "cdk-demo"
+    },
+
+    "Stack": {
+        "OAuthCognito": {
+            "Name": "OAuthCognitoStack",
+
+            "UserPoolName": "UserPool",
+            "UserPoolClientName": "OAuthClient",
+            
+            "CognitoDomainPrefix": "api",
+
+            "ResourceServerIdentifier": "API",
+            "ResourceServerScopes": [
+                {"Key": "ScopeBookGet", "Scope":"book.get", "Allow": true},
+                {"Key": "ScopeBookPost", "Scope":"book.post", "Allow": true},
+                {"Key": "ScopeUserGet", "Scope":"user.get", "Allow": false},
+                {"Key": "ScopeUserPost", "Scope":"user.post", "Allow": false}
+            ]
+        },
+        "BackendLambda": {
+            "Name": "BackendLambdaStack",
+
+            "BookFunction": "book-api",
+            "UserFunction": "user-api"
+        },
+        "RestApigateway": {
+            "Name": "RestApigatewayStack",
+
+            "ApiName": "REST-APIs",
+            "ApiDescription": "This is a public REST APIs, but clients must have a valid access-token with scopes",
+
+            "AuthorizerName": "CognitoAuthorizer",
+
+            "LoggingEnable": true,
+            "LoggingEnableDescription": "Please change this option if you don't need logging(this results in unexpected cost)."
+        }
+    }
+}
