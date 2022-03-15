@@ -8,9 +8,7 @@ Among ```Authorization Grant``` [OAuth 2.0 authorization framework](https://data
 
 ### Amazon Congito - User Pool
 
-Amazon Cognito user pool supports the OAuth 2.0. Since the client credentials flow is not used on behalf of a user, only custom scopes can be used with this flow. A custom scope is one that you define for your own ```Resource servers``` in Cognito user pool. An access token returned from Cognito authorization server includes what kind of custom scopes we can access.
-
-https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html
+Amazon Cognito user pool supports the OAuth 2.0. Since the client credentials flow is not used on behalf of a user, only custom scopes can be used with this flow. A custom scope is one that you define for your own ```Resource servers``` in Cognito user pool. An access token returned from Cognito authorization server includes what kind of custom scopes we can access. Detail guide: ![cognito-user-pools-app-idp-settings](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html)
 
 - Create Cognito ```User Pool```
 - Create ```Domain name``` in the user pool
@@ -21,9 +19,7 @@ https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app
 
 ### Amazon API Gateway - Cognito Authorizer
 
-We can control access to a REST API of Amazon API Gateway using Amazon Cognito user pools as authorizer. Cognito Authizaer in Amazon API Gateway verifies the token on our behalf. The access token is used to authorize API calls based on the custom scopes of specified access-protected resources.
-
-https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html
+We can control access to a REST API of Amazon API Gateway using Amazon Cognito user pools as authorizer. Cognito Authizaer in Amazon API Gateway verifies the token on our behalf. The access token is used to authorize API calls based on the custom scopes of specified access-protected resources. Detail guide: ![apigateway-integrate-with-cognito](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
 
 - Create Amazon API Gateway(REST API)
 - Create Authorizaer in the REST API with type = Cognito & with Cognito user pool created in Cognito User pool
