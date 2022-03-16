@@ -148,7 +148,7 @@ curl -X POST "${API_ENDPOINT}user" -H "Authorization:${ACCESS_TOKEN}"
 ## Clean up
 
 ```bash
-sh script/setup_initial.sh config/app-config-demo.json
+sh script/destroy_stacks.sh config/app-config-demo.json
 ```
 
 Caution: You must ```delete``` Amazon Cognito User Pools manually because of removal policy.
@@ -160,3 +160,4 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
+
