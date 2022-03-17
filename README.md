@@ -4,7 +4,7 @@
 
 ## Solution
 
-Among ```Authorization Grant``` [OAuth 2.0 authorization framework](https://datatracker.ietf.org/doc/html/rfc6749) proivdes, ```[Client credentials grant](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)``` is used for machine to machine communication for here. We can use this flow to request an access token to access our own resources.
+Among Authorization Grant [OAuth 2.0 authorization framework](https://datatracker.ietf.org/doc/html/rfc6749) proivdes, [Client credentials grant](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) is used for machine to machine communication for here. We can use this flow to request an access token to access our own resources.
 
 ### Amazon Congito - User Pool
 
@@ -36,6 +36,14 @@ We can control access to a REST API of Amazon API Gateway using Amazon Cognito u
 
 All the resources described above are implemented and provided through AWS CDK ver2. Because this CDK project is built on top of [AWS CDK Project Template for DevOps
 ](https://github.com/aws-samples/aws-cdk-project-template-for-devops), please refer to that repository for details.
+
+ And other "Using AWS CDK" series can be found at:
+
+- [AWS Serverless Using AWS CDK](https://github.com/aws-samples/aws-serverless-using-aws-cdk)
+- [Amazon SageMaker Model Serving Using AWS CDK](https://github.com/aws-samples/amazon-sagemaker-model-serving-using-aws-cdk)
+- [AWS ECS DevOps using AWS CDK](https://github.com/aws-samples/aws-iot-greengrass-v2-using-aws-cdk](https://github.com/aws-samples/aws-ecs-devops-using-aws-cdk))
+- [AWS IoT Greengrass Ver2 using AWS CDK](https://github.com/aws-samples/aws-iot-greengrass-v2-using-aws-cdk)
+- [Amazon SageMaker Built-in Algorithms MLOps Pipeline Using AWS CDK](https://github.com/aws-samples/amazon-sagemaker-built-in-algorithms-mlops-pipeline-using-aws-cdk)
 
 ### Prerequisites
 
