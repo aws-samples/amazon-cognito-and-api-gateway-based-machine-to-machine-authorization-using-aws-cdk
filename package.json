@@ -1,5 +1,5 @@
 {
-  "name": "machine-2-machine-authorization",
+  "name": "@aws-samples/machine-2-machine-authorization",
   "version": "0.1.0",
   "bin": {
     "machine-2-machine-authorization": "infra/app-main.js"
