@@ -6,7 +6,7 @@
 
 Among Authorization Grant [OAuth 2.0 authorization framework](https://datatracker.ietf.org/doc/html/rfc6749) proivdes, [Client credentials grant](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) is used for machine to machine communication for here. We can use this flow to request an access token to access our own resources.
 
-### Amazon Congito - User Pool
+### Amazon Cognito - User Pool
 
 Amazon Cognito user pool supports the OAuth 2.0. Since the client credentials flow is not used on behalf of a user, only custom scopes can be used with this flow. A custom scope is one that you define for your own ```Resource servers``` in Cognito user pool. An access token returned from Cognito authorization server includes what kind of custom scopes we can access. Detail guide: [cognito-user-pools-app-idp-settings](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html)
 
