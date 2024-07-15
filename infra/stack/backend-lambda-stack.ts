@@ -19,7 +19,7 @@ export class BackendLambdaStack extends base.BaseStack {
     private createLambdaFunction(baseName: string): lambda.Function {
         const func = new lambda.Function(this, `${baseName}-func`, {
             functionName: `${this.projectPrefix}-${baseName}-func`,
-            runtime: lambda.Runtime.NODEJS_12_X,
+            runtime: lambda.Runtime.NODEJS_16_X,
             code: lambda.Code.fromAsset(`codes/lambda/${baseName}/src`),
             handler: 'index.handle',
         });

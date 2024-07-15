@@ -36,7 +36,6 @@ echo .
 
 echo ==--------BootstrapCDKEnvironment---------==
 cdk bootstrap aws://$ACCOUNT/$REGION
-cdk bootstrap aws://$ACCOUNT/$REGION2
 echo .
 echo .
 
