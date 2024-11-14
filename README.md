@@ -4,7 +4,7 @@
 
 ## Solution
 
-Among Authorization Grant [OAuth 2.0 authorization framework](https://datatracker.ietf.org/doc/html/rfc6749) proivdes, [Client credentials grant](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) is used for machine to machine communication for here. We can use this flow to request an access token to access our own resources.
+Among Authorization Grant [OAuth 2.0 authorization framework](https://datatracker.ietf.org/doc/html/rfc6749) provides, [Client credentials grant](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) is used for machine to machine communication for here. We can use this flow to request an access token to access our own resources.
 
 ### Amazon Cognito - User Pool
 
@@ -19,10 +19,10 @@ Amazon Cognito user pool supports the OAuth 2.0. Since the client credentials fl
 
 ### Amazon API Gateway - Cognito Authorizer
 
-We can control access to a REST API of Amazon API Gateway using Amazon Cognito user pools as authorizer. Cognito Authizaer in Amazon API Gateway verifies the token on our behalf. The access token is used to authorize API calls based on the custom scopes of specified access-protected resources. Detail guide: [apigateway-integrate-with-cognito](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
+We can control access to a REST API of Amazon API Gateway using Amazon Cognito user pools as authorizer. Cognito Authorizer in Amazon API Gateway verifies the token on our behalf. The access token is used to authorize API calls based on the custom scopes of specified access-protected resources. Detail guide: [apigateway-integrate-with-cognito](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
 
 - Create Amazon API Gateway(REST API)
-- Create Authorizaer in the REST API with type = Cognito & with Cognito user pool created in Cognito User pool
+- Create Authorizer in the REST API with type = Cognito & with Cognito user pool created in Cognito User pool
 - Create some resources in the REST API
 - Create method in the resources with Cognito Authorizer and OAuth Scopes created in Cognito User pool
 
@@ -60,10 +60,10 @@ curl: curl --version
 Caution: This solution contains not-free tier AWS services. So be careful about the possible costs.
 
 ```bash
-vim config/app-config-demo.json # change project's AWS Account/Region/Profile
+vim config/app-config-demo.json # change project's AWS Account/Region/Profile, CognitoDomainPrefix
 export APP_CONFIG=config/app-config-demo.json
 sh script/setup_initial.sh config/app-config-demo.json
-sh script/destroy_stacks.sh config/app-config-demo.json
+sh script/deploy_stacks.sh config/app-config-demo.json
 ```
 
 ## Key Deployment Results
